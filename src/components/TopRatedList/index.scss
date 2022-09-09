@@ -1,0 +1,113 @@
+.TopRatedList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  scroll-snap-type:  y mandatory;
+  gap: 30px;
+  width: 100%;
+  height: 390px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 20px 0 0 20px;
+  transition: all 0.35s;
+
+  .TopRated_Section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: flex-start;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(125, 5, 3);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+  }
+  .TopRated__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    color: white;
+  }
+  .likebtn {
+    z-index: 88;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: flex-end;
+    padding-top: 180px;
+    position: absolute;
+    gap: 340px;
+  }
+
+  .info_icon:hover {
+    z-index: 9999;
+    transform: scale(1.5);
+  }
+  .icon {
+    cursor: pointer;
+
+    &:hover {
+      color: red !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+ .TopRated_Section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: flex-start;
+    
+    .TopRatedList {
+    display: flex;
+
+    flex-direction: row; 
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 290px;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+
+    transition: all 0.35s; 
+  } 
+  .TopRated__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:221px;
+    height: 216px;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    .MainCard__text {
+      padding: 0 47px;
+  }
+    }
+    .likebtn {
+      display: flex;
+      padding-top: 5px;
+      margin-top: 204px;
+      gap:180px;
+    }
+  }
+}
